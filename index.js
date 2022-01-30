@@ -1,31 +1,40 @@
-const Discord = require('discord.js');
-const { Client, Intents } = require('discord.js');
-const { responses } = require("./responses");
+const Discord = require('discord.io');
+const logger = require('winston');
+const {responses} = require("./responses");
 require("dotenv").config();
 
-//create new client
-// const client = new Discord.Client();
-const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
-
-
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}!`);
+// Initialize Discord Bot
+const bot = new Discord.Client({
+    token: process.env.token,
+    autorun: true
 });
 
-client.on('message', (msg) => {
+// Configure logger settings
+logger.remove(logger.transports.Console);
+logger.add(new logger.transports.Console, {
+    colorize: true
+});
 
-    if (
-        (msg.content.includes("┻") || msg.content.includes("︵")) 
-        && msg.author.id === "85534406369894400"
-        && msg.author.id !== "937124780799324182"
-    ) {
+logger.level = 'debug';
+
+// confirms connection
+bot.on('ready', (evt) => {
+    logger.info('Connected');
+    logger.info('Logged in as: ');
+    logger.info(bot.username + ' - (' + bot.id + ')');
+});
+
+// event listener for messages, checks for tableflip
+bot.on('message', (user, userID, channelID, message, evt) => {
+
+    if ((message.includes("┻") || message.includes("︵")) && userID !== "85534406369894400" && userID !== "937124780799324182") {
+        
         let response = responses[Math.floor(Math.random() * responses.length)];
-        response = response.replace("USERID", `${msg.author.id}`);
+        response = response.replace("USERID", `${userID}`);
 
-        msg.reply(response);
+        bot.sendMessage({
+            to: channelID,
+            message: response
+        })
     }
 });
-
-//make sure this line is the last line
-//login bot using token
-client.login(process.env.token); 

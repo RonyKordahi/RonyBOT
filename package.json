@@ -17,10 +17,6 @@
         "url": "https://github.com/RonyKordahi/RonyBOT/issues"
     },
     "homepage": "https://github.com/RonyKordahi/RonyBOT#readme",
-    "engines": {
-        "node": "16.13.1",
-        "npm": "8.1.2"
-    },
     "dependencies": {
         "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
         "discord.js": "^13.6.0",
