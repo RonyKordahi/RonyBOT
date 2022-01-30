@@ -1,0 +1,15 @@
+{
+    "name": "RonyBOT",
+    "version": "1.0.0",
+    "description": "Only Rony can flip tables!",
+    "main": "index.js",
+    "author": "Redmoron#6235",
+    "dependencies": {
+        "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+        "nodemon": "^2.0.15",
+        "winston": "^3.5.0"
+    },
+    "scripts": {
+        "start": "nodemon index.js"
+    }
+}
