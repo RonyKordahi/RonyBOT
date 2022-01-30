@@ -9,7 +9,8 @@ const responses = [
     "Did you even read the rules? ┬─┬ ノ( ゜-゜ノ)",
     "You're not special enough. ┬─┬ ノ( ゜-゜ノ)",
     "Oh god what have you done?!  )ノ゜ _ ゜ (ノ┬─┬",
-    "(\\ °-°)\\  ┬─┬ From the other side this time."
+    "(\\ °-°)\\  ┬─┬ From the other side this time.",
+    "https://media.giphy.com/media/flWn1Cyk9HcVIj9xWy/giphy.gif ┬─┬ ノ( ゜-゜ノ)"
 ]
 
 module.exports = {responses};
