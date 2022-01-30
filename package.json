@@ -24,6 +24,7 @@
     },
     "dependencies": {
         "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
+        "dotenv": "^14.3.2",
         "nodemon": "^2.0.15",
         "winston": "^3.5.0"
     }

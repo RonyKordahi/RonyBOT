@@ -1,11 +1,11 @@
 const Discord = require('discord.io');
 const logger = require('winston');
-const auth = require('./auth.json');
 const {responses} = require("./responses");
+require("dotenv").config();
 
 // Initialize Discord Bot
 const bot = new Discord.Client({
-    token: auth.token,
+    token: process.env.token,
     autorun: true
 });
 
