@@ -24,7 +24,7 @@ bot.on('ready', (evt) => {
     logger.info(bot.username + ' - (' + bot.id + ')');
 });
 
-// event listener for messages
+// event listener for messages, checks for tableflip
 bot.on('message', (user, userID, channelID, message, evt) => {
 
     if ((message.includes("┻") || message.includes("︵")) && userID !== "85534406369894400" && userID !== "937124780799324182") {
