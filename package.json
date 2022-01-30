@@ -1,15 +1,29 @@
 {
-    "name": "RonyBOT",
+    "name": "ronybot",
     "version": "1.0.0",
-    "description": "Only Rony can flip tables!",
+    "description": "Unflips all tables except mine",
     "main": "index.js",
+    "scripts": {
+        "start": "nodemon index.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RonyKordahi/RonyBOT.git"
+    },
     "author": "Redmoron#6235",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/RonyKordahi/RonyBOT/issues"
+    },
+    "homepage": "https://github.com/RonyKordahi/RonyBOT#readme",
+    "engines": {
+        "node": "16.13.1",
+        "npm": "8.1.2"
+    },
     "dependencies": {
         "discord.io": "https://github.com/woor/discord.io/tarball/gateway_v6",
         "nodemon": "^2.0.15",
         "winston": "^3.5.0"
-    },
-    "scripts": {
-        "start": "nodemon index.js"
     }
 }
