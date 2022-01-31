@@ -1,3 +1,5 @@
+// discord.io
+
 const Discord = require('discord.io');
 const logger = require('winston');
 const {responses} = require("./responses");
@@ -27,7 +29,11 @@ bot.on('ready', (evt) => {
 // event listener for messages, checks for tableflip
 bot.on('message', (user, userID, channelID, message, evt) => {
 
-    if ((message.includes("┻") || message.includes("︵")) && userID !== "85534406369894400" && userID !== "937124780799324182") {
+    if (
+        (message.includes("┻") || message.includes("︵")) 
+        && userID !== "85534406369894400" 
+        && userID !== "937124780799324182"
+    ) {
         
         let response = responses[Math.floor(Math.random() * responses.length)];
         response = response.replace("USERID", `${userID}`);

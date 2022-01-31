@@ -1,3 +1,5 @@
+// discord.js
+
 const Discord = require('discord.js');
 const { Client, Intents } = require('discord.js');
 const { responses } = require("./responses");
