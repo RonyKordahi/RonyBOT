@@ -18,7 +18,7 @@ client.on('message', (msg) => {
 
     if (
         (msg.content.includes("┻") || msg.content.includes("︵")) 
-        && msg.author.id === "85534406369894400"
+        && msg.author.id !== "85534406369894400"
         && msg.author.id !== "937124780799324182"
     ) {
         let response = responses[Math.floor(Math.random() * responses.length)];
