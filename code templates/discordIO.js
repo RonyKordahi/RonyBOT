@@ -1,4 +1,4 @@
-// discord.io
+// discord.io - DEPCRECATED
 
 const Discord = require('discord.io');
 const logger = require('winston');
