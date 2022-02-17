@@ -21,7 +21,7 @@ client.on('message', (msg) => {
 
     // checks if message includes trigger characters
     const charTrigger = characters.some(char => {
-            return msg.includes(char);
+            return msg.content.includes(char);
     })
 
     if (
