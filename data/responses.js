@@ -13,4 +13,23 @@ const responses = [
     "https://media.giphy.com/media/flWn1Cyk9HcVIj9xWy/giphy.gif ┬─┬ ノ( ゜-゜ノ)"
 ]
 
-module.exports = {responses};
+const winResponses = [
+    "You are the winner \nI will give you your prize now \nWhich is this haiku",
+    `You win! Have a trophy! \n
+          (▁v▁)
+         ▁▁|▁▁
+       | ≡ ≡ ≡ ≡ |
+     |-----+-----|
+     |      1ST \t |
+     |   PLACE   |
+     '------------'
+       \\            /
+          '.        .'
+           |       |
+          .'\t    '.
+        /▁▁▁▁\\
+    [<@USERID>]`,
+    "<@USERID> has won! \nhttps://c.tenor.com/F-mq05c3FUIAAAAC/celebrate-confetti.gif"
+]
+
+module.exports = {responses, winResponses};

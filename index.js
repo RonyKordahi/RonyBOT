@@ -4,10 +4,10 @@
 const { Client, Intents } = require('discord.js');
 require("dotenv").config();
 
-const { responses } = require("./data/responses");
+const { responses, winResponses } = require("./data/responses");
 const { characters } = require("./data/characters");
 
-//create new client
+// create new client
 // const client = new Discord.Client();
 const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
@@ -30,7 +30,16 @@ client.on('message', (msg) => {
         && msg.author.id !== "937124780799324182" // RonyBOT
     ) {
         // random response
-        let response = responses[Math.floor(Math.random() * responses.length)];
+        const random = Number(Math.random().toFixed(2));
+        let response;
+        
+        if(random === 0.01) {
+            response = winResponses[Math.floor(random * winResponses.length)];
+        }
+        else {
+            response = responses[Math.floor(random * responses.length)];
+        }
+        
         response = response.replace("USERID", `${msg.author.id}`);
 
         // reply
@@ -38,6 +47,6 @@ client.on('message', (msg) => {
     }
 });
 
-//make sure this line is the last line
-//login bot using token
+// make sure this line is the last line
+// login bot using token
 client.login(process.env.token); 
