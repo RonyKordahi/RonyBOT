@@ -26,7 +26,7 @@ client.on('message', (msg) => {
 
     if (
         charTrigger // character
-        && msg.author.id == "85534406369894400" // Rony
+        && msg.author.id !== "85534406369894400" // Rony
         && msg.author.id !== "937124780799324182" // RonyBOT
     ) {
         // random response
