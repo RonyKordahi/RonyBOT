@@ -15,9 +15,10 @@ const characters = [
     "ﾉ",
     "└",
     "ლ",
+    "tableflip"
 ]
 
-// char test
+// char test - checks if message includes trigger characters
 // const t = "a";
 // console.log(characters.some(char => {
 //     return t === char;

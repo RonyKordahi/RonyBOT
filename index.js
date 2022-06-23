@@ -21,12 +21,12 @@ client.on('message', (msg) => {
 
     // checks if message includes trigger characters
     const charTrigger = characters.some(char => {
-            return msg.content.includes(char);
+            return msg.content.toLowerCase().includes(char);
     })
 
     if (
         charTrigger // character
-        && msg.author.id !== "85534406369894400" // Rony
+        && msg.author.id == "85534406369894400" // Rony
         && msg.author.id !== "937124780799324182" // RonyBOT
     ) {
         // random response
@@ -42,8 +42,14 @@ client.on('message', (msg) => {
         
         response = response.replace("USERID", `${msg.author.id}`);
 
-        // reply
-        msg.reply(response);
+        // reply to user
+        // msg.reply(response);
+
+        // delete message
+        msg.delete();
+
+        // send message
+        msg.channel.send(response);
     }
 });
 

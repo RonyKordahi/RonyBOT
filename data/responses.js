@@ -13,6 +13,7 @@ const responses = [
     "https://media.giphy.com/media/flWn1Cyk9HcVIj9xWy/giphy.gif ┬─┬ ノ( ゜-゜ノ)"
 ]
 
+// trophy formatted specifically to come out not gross on Discord
 const winResponses = [
     "You are the winner \nI will give you your prize now \nWhich is this haiku",
     `You win! Have a trophy! \n
