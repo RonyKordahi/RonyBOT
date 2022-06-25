@@ -43,13 +43,13 @@ client.on('message', (msg) => {
         response = response.replace("USERID", `${msg.author.id}`);
 
         // reply to user
-        // msg.reply(response);
+        msg.reply(response);
 
         // delete message
-        msg.delete();
+        // msg.delete();
 
         // send message
-        msg.channel.send(response);
+        // msg.channel.send(response);
     }
 });
 
