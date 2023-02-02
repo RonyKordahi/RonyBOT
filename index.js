@@ -25,11 +25,11 @@ client.on('message', (msg) => {
     })
 
     if (
-        charTrigger // character
+        charTrigger // character found
         && msg.author.id !== "85534406369894400" // Rony
         && msg.author.id !== "937124780799324182" // RonyBOT
     ) {
-        // random response
+        // random response - toFixed to limit to 2 decimals, used for checking for a winner
         const random = Number(Math.random().toFixed(2));
         let response;
         
