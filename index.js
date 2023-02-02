@@ -2,6 +2,7 @@
 
 // const Discord = require('discord.js');
 const { Client, Intents } = require('discord.js');
+const keep_alive = require('./keep_alive.js');
 require("dotenv").config();
 
 const { responses, winResponses } = require("./data/responses");
