@@ -15,7 +15,8 @@ const characters = [
     "ﾉ",
     "└",
     "ლ",
-    "tableflip"
+    "tableflip",
+    "°",
 ]
 
 // char test - checks if message includes trigger characters
@@ -24,4 +25,4 @@ const characters = [
 //     return t === char;
 // }))
 
-module.exports = {characters};
+module.exports = { characters };
